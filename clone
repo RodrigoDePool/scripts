@@ -4,8 +4,6 @@
 ##	This script allows to execute git clone either normally
 ##	or giving two arguments "username" and "repository name"
 ##
-##	Add to your .bin repository and make it executable (chmod +x clone)
-##
 
 import sys
 import os

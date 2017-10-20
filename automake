@@ -1,0 +1,39 @@
+#!/usr/bin/env python
+
+##
+##	This script executes 'make' everytime there is a change
+##	in the current directory
+##
+
+import time, subprocess
+import signal, os, sys
+
+
+def main():
+	signal.signal(signal.SIGINT,handler)
+
+	print("Compiling:")
+	subprocess.call("make", shell = True)
+	#Get the time of the last modification in secs since epoch
+	aux = subprocess.check_output("stat -c %Y ./", shell = True )	
+	num = aux
+	while True:		
+		if( num != aux ):
+			print("\n\n\n\n\n Compiling again:")
+			subprocess.call("make", shell = True)
+			aux = subprocess.check_output("stat -c %Y ./", shell = True )
+			num = aux
+		else:
+			time.sleep(0.5)
+			aux = subprocess.check_output("stat -c %Y ./", shell = True )
+		
+
+
+#Exits on ctrl + C
+def handler(signum, frame):
+	print("")
+	sys.exit(0)
+
+
+if __name__ == "__main__":
+	main()
