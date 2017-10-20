@@ -10,7 +10,7 @@ interpreter is necessary to execute them.
 This command aims to replace the traditional `git clone`.
 
 - Given one argument it works exactly the same as git clone.
-- Given two arguments ( "usr\_of\_owner", "repository_name" ) it calls:
+- Given two arguments ( "usr\_of\_owner", "repository_name" ) it calls:  
 `git clone https://github.com/usr_of_owner/repository_name.git` 
 - In any other case, it does nothing.
 
