@@ -1,0 +1,22 @@
+#!/usr/bin/env python
+
+"""
+    Alias for pandoc -s -o (transforms markdown files into pdf)
+"""
+
+import sys
+import os
+
+def main():
+    long = len(sys.argv);
+    if long == 3:
+        os.system("pandoc -s -o "+sys.argv[1]+" "+sys.argv[2]);
+    else:
+        print "To execute command:"
+        print "mdtopdf <pdf file name> <markdown file>"
+    return;
+
+
+# main executes only if executing this file
+if __name__== "__main__":
+    main();

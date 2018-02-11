@@ -21,3 +21,8 @@ This command aims to automate the command `make` while compiling little projects
 When used, this script will execute `make` everytime there is a change in the
 current directory. Allowing the user to receive feedback immediately when
 modifying the code. To end the script just use ctrl+c.
+
+---
+### mdtopdf
+An alias for _pandoc -s -o_ (converts markdown into pdf).  
+Requires pandoc and texlive-full packages
