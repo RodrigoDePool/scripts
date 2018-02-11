@@ -24,5 +24,5 @@ modifying the code. To end the script just use ctrl+c.
 
 ---
 ### mdtopdf
-An alias for _pandoc -s -o_ (converts markdown into pdf).  
-Requires pandoc and texlive-full packages
+An alias for `pandoc -s -o` (converts markdown into pdf).  
+Requires `pandoc` and `texlive-full` packages
