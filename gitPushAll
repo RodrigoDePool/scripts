@@ -1,0 +1,17 @@
+#!/usr/bin/python3
+import sys
+import os
+
+if len(sys.argv) == 2:
+    message = sys.argv[1]
+elif len(sys.argv) == 1:
+    message = 'Auto-pushed'
+else:
+    print('This command must receive 1 or 0 arguments')
+    exit()
+
+aux = os.system('git add -A')
+if aux != 0: exit()
+aux = os.system('git commit -m \"'+message+'\"');
+if aux != 0: exit()
+aux = os.system('git push')
